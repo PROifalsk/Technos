@@ -3,9 +3,9 @@
 	"id": "technos",
 	"version": "${version}",
 	"name": "Technos",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "write there any description pls!!!",
 	"authors": [
-		"Me!"
+		"proifalsk"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"net.proifalsk.technos.TechnosDataGenerator"
+		],
+		"client": [
+			"net.proifalsk.technos.TechnosClient"
 		]
 	},
 	"mixins": [
