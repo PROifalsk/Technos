@@ -1,4 +1,4 @@
-package net.proifalsk.technos.items;
+package net.proifalsk.technos.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;

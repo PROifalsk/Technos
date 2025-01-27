@@ -3,7 +3,7 @@ package net.proifalsk.technos;
 import net.fabricmc.api.ModInitializer;
 
 import net.proifalsk.technos.blocks.ModBlocks;
-import net.proifalsk.technos.items.ModItems;
+import net.proifalsk.technos.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +13,7 @@ public class Technos implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready states
+		LOGGER.info("Initializing Technos");
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();

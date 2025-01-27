@@ -8,10 +8,10 @@
 		"proifalsk"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://fabric.net/",
+		"sources": "https://github.com/PROifalsk/Technos"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/technos/icon.png",
 	"environment": "*",
 	"entrypoints": {
