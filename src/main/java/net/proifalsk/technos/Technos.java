@@ -2,7 +2,7 @@ package net.proifalsk.technos;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.proifalsk.technos.blocks.ModBlocks;
+import net.proifalsk.technos.block.ModBlocks;
 import net.proifalsk.technos.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
