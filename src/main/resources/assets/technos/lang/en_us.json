@@ -1,4 +1,13 @@
 {
   "item.technos.screwdriver": "Screwdriver",
-  "block.technos.marble_block": "Marble Block"
+  "item.technos.white_phosphorous": "White Phosphorous Brick",
+
+  "block.technos.marble_block": "Marble Block",
+
+  "itemGroup.technos_materials": "Technos Materials",
+  "itemGroup.technos_tools": "Technos Tools",
+  "itemGroup.technos_blocks": "Technos Blocks",
+
+  "item_tooltip.hot": "§2[Pyrophoric/Hot]",
+  "item_tooltip.radioactive": "§a[Radioactive]"
 }

@@ -17,21 +17,12 @@ public class ModBlocks {
     public static Block MARBLE_BLOCK;
 
     public static void registerModBlocks() {
-        MARBLE_BLOCK = register("marble_block", Block::new, Block.Settings.create().strength(4.0f));
-
-        setModBlocksIntoGroups();
+        MARBLE_BLOCK = registerBlock("marble_block", Block::new, Block.Settings.create().strength(4.0f));
 
         Technos.LOGGER.info("Technos Block Registry: SUCCESS");
     }
 
-    private static void setModBlocksIntoGroups() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            //Items in BUILDING BLOCKS group
-            entries.add(MARBLE_BLOCK);
-        });
-    }
-
-    private static Block register(String path, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+    private static Block registerBlock(String path, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         final Identifier identifier = Identifier.of(Technos.MOD_ID, path);
         final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
 

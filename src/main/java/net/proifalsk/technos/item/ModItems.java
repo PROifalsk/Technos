@@ -9,28 +9,25 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 import net.proifalsk.technos.Technos;
+import net.proifalsk.technos.item.custom.HazardousItem;
 
 import java.util.function.Function;
 
 public class ModItems {
     public static Item SCREWDRIVER;
 
-    public static void registerModItems() {
-        SCREWDRIVER = register("screwdriver", Item::new, new Item.Settings());
+    public static Item WHITE_PHOSPHOROUS;
 
-        setModItemsIntoGroups();
+    public static void registerModItems() {
+        SCREWDRIVER = registerItem("screwdriver", Item::new, new Item.Settings());
+
+        WHITE_PHOSPHOROUS = registerItem("white_phosphorous", HazardousItem::new, new Item.Settings());
 
         Technos.LOGGER.info("Technos Item Registry: SUCCESS");
     }
 
-    private static void setModItemsIntoGroups() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-            //Items in TOOLS group
-            entries.add(SCREWDRIVER);
-        });
-    }
 
-    private static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
+    private static Item registerItem(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Technos.MOD_ID, path));
         return Items.register(registryKey, factory, settings);
     }
