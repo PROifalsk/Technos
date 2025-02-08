@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "technos:item/white_phosphorous"
+    "model": "technos:block/workbench"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "technos:item/screwdriver"
+    "all": "technos:block/white_phosphorous_block"
   }
 }

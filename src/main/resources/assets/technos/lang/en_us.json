@@ -1,8 +1,11 @@
 {
   "item.technos.screwdriver": "Screwdriver",
-  "item.technos.white_phosphorous": "White Phosphorous Brick",
+  "item.technos.white_phosphorous_brick": "White Phosphorous Brick",
 
-  "block.technos.marble_block": "Marble Block",
+  "block.technos.bauxite_block": "Bauxite Block",
+  "block.technos.white_phosphorous_block": "White Phosphorous Block",
+
+  "block.technos.workbench": "Workbench",
 
   "itemGroup.technos_materials": "Technos Materials",
   "itemGroup.technos_tools": "Technos Tools",

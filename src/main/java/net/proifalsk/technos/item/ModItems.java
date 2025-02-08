@@ -1,8 +1,6 @@
 package net.proifalsk.technos.item;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -16,12 +14,12 @@ import java.util.function.Function;
 public class ModItems {
     public static Item SCREWDRIVER;
 
-    public static Item WHITE_PHOSPHOROUS;
+    public static Item WHITE_PHOSPHOROUS_BRICK;
 
     public static void registerModItems() {
         SCREWDRIVER = registerItem("screwdriver", Item::new, new Item.Settings());
 
-        WHITE_PHOSPHOROUS = registerItem("white_phosphorous", HazardousItem::new, new Item.Settings());
+        WHITE_PHOSPHOROUS_BRICK = registerItem("white_phosphorous_brick", HazardousItem::new, new Item.Settings());
 
         Technos.LOGGER.info("Technos Item Registry: SUCCESS");
     }

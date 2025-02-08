@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -16,14 +15,14 @@ import net.proifalsk.technos.Technos;
 import net.proifalsk.technos.block.ModBlocks;
 
 public class ModItemGroups {
-    public static final RegistryKey<ItemGroup> TECHNOS_MATERIALS_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Technos.MOD_ID, "item_group"));
-    public static final ItemGroup TECHNOS_MATERIALS = registerItemGroup(ModItems.WHITE_PHOSPHOROUS, "itemGroup.technos_materials");
+    public static final RegistryKey<ItemGroup> TECHNOS_MATERIALS_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Technos.MOD_ID, "technos_materials"));
+    public static final ItemGroup TECHNOS_MATERIALS = registerItemGroup(ModItems.WHITE_PHOSPHOROUS_BRICK, "itemGroup.technos_materials");
 
-    public static final RegistryKey<ItemGroup> TECHNOS_TOOLS_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Technos.MOD_ID, "item_group"));
+    public static final RegistryKey<ItemGroup> TECHNOS_TOOLS_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Technos.MOD_ID, "technos_tools"));
     public static final ItemGroup TECHNOS_TOOLS = registerItemGroup(ModItems.SCREWDRIVER, "itemGroup.technos_tools");
 
-    public static final RegistryKey<ItemGroup> TECHNOS_BLOCKS_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Technos.MOD_ID, "item_group"));
-    public static final ItemGroup TECHNOS_BLOCKS = registerItemGroup(ModBlocks.MARBLE_BLOCK.asItem(), "itemGroup.technos_blocks");
+    public static final RegistryKey<ItemGroup> TECHNOS_BLOCKS_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Technos.MOD_ID, "technos_blocks"));
+    public static final ItemGroup TECHNOS_BLOCKS = registerItemGroup(ModBlocks.BAUXITE_BLOCK.asItem(), "itemGroup.technos_blocks");
 
     public static void registerModItemGroups()
     {
@@ -32,7 +31,7 @@ public class ModItemGroups {
         Registry.register(Registries.ITEM_GROUP, TECHNOS_BLOCKS_KEY, TECHNOS_BLOCKS);
 
         ItemGroupEvents.modifyEntriesEvent(TECHNOS_MATERIALS_KEY).register(entries -> {
-            entries.add(ModItems.WHITE_PHOSPHOROUS);
+            entries.add(ModItems.WHITE_PHOSPHOROUS_BRICK);
         });
 
         ItemGroupEvents.modifyEntriesEvent(TECHNOS_TOOLS_KEY).register(entries -> {
@@ -40,7 +39,9 @@ public class ModItemGroups {
         });
 
         ItemGroupEvents.modifyEntriesEvent(TECHNOS_BLOCKS_KEY).register(entries -> {
-            entries.add(ModBlocks.MARBLE_BLOCK);
+            entries.add(ModBlocks.BAUXITE_BLOCK);
+            entries.add(ModBlocks.WHITE_PHOSPHOROUS_BLOCK);
+            entries.add(ModBlocks.WORKBENCH);
         });
     }
 

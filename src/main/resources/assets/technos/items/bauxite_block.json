@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "technos:block/marble_block"
+    "model": "technos:block/bauxite_block"
   }
 }
