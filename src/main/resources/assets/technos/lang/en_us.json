@@ -12,5 +12,6 @@
   "itemGroup.technos_blocks": "Technos Blocks",
 
   "item_tooltip.hot": "§2[Pyrophoric/Hot]",
-  "item_tooltip.radioactive": "§a[Radioactive]"
+  "item_tooltip.radioactive": "§a[Radioactive]",
+  "item_tooltip.press_shift": "§fPress <Left Shift> to show more information"
 }
